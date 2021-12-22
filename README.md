@@ -1,2 +1,3 @@
-# constraint-lcs2.github.io
-Constraint website
+# CONSTRAINT Shared Task @ ACL 2022
+Website for CONSTRAINT SHARED TASK @ ACL 2022
+
