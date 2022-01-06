@@ -143,10 +143,19 @@
                     <div class="col-md-12">
                         <p align="justify">
                         <ul style="list-style: none;">
+                            
+                            
+                            
+                            
                             <li>
                                 <div style="width: 5%; float: left;"><i class="fa fa-cog fa-spin fa-x" style="color:#0000ff;" aria-hidden="true"></i></div>
-                                Stay tuned for the updates related to the shared task.
+                                We will soon be releasing the training/validation set for “US Politics domain”. Stay tuned!
                             </li>                          
+                            <li>
+                                <div style="width: 5%; float: left;"><i class="fa fa-cog fa-spin fa-x" style="color:#0000ff;" aria-hidden="true"></i></div>
+                                The training/validation dataset for “Covid19” domain is now released. 
+                            </li>                          
+                            
                             <!-- paste the <li> item again here  -->
                              
                         </ul>
@@ -207,78 +216,89 @@ publisher = {Springer},
                         <p id="link-site"><span>For worshop details please visit:</span> <a href="http://lcs2.iiitd.edu.in/CONSTRAINT-2022/">http://lcs2.iiitd.edu.in/CONSTRAINT-2022/</a> </p><br>
 
                         <ul style="text-align: justify; list-style: none;">
-                            <li><b id="task-main">Tasks-</b> <span class="extra">The CONSTRAINT-2022 shared task on the topic "Visual-semantic Role-labeling for Understanding Memes" invites participation in two subtasks:</span><br><br>
+                            <li><b id="task-main">Tasks-</b> <span class="extra">The CONSTRAINT-2022 shared task on the topic <b>Hero, Villain and Victim: Dissecting harmful memes for Semantic role labelling of entities</b> invites participation in below subtask:</span><br><br>
                                 <ul style="margin-left: 2%;">
-                                    <li>
-                                        <span class="subtask">Entity detection from memes:</span> The first
-subtask focuses on detecting references being made
-within memes. There are various types of entities like a
-person, organization, community or geopolitical entity
-that are referred to or depicted within a meme via
-positive, negative, or neutral connotations. The objective
-of this subtask is to detect the set of valid entities either
-depicted or mentioned within a given meme.<br>
+                                    <!-- <li>
+                                        <span class="subtask">Entity detection from memes:</span> The first subtask focuses on detecting references being made within memes. There are various types of entities like a person, organization, community or geopolitical entity that are referred to or depicted within a meme via positive, negative, or neutral connotations. The objective of this subtask is to detect the set of valid entities either depicted or mentioned within a given meme.<br>
 
-                                       <!--  <p id="example"><code>If you take Crocin thrice a day you are safe.</code> <span class="badge badge-pill">Fake</span><br>
+                                        <p id="example"><code>If you take Crocin thrice a day you are safe.</code> <span class="badge badge-pill">Fake</span><br>
                                         <code id="real"> Wearing mask can protect you from the virus </code><span class="badge badge-pill">Real</span></p>
                                        <p>  <b> English Dataset: </b> <a href="https://competitions.codalab.org/competitions/26655"> https://competitions.codalab.org/competitions/26655</a></p>
-                                        <b> English dataset paper: </b> <a href = "https://arxiv.org/abs/2011.03327"> Fighting an Infodemic: COVID-19 Fake News Dataset </a> --> 
-                                    </li>
-                                    <br>
+                                        <b> English dataset paper: </b> <a href = "https://arxiv.org/abs/2011.03327"> Fighting an Infodemic: COVID-19 Fake News Dataset </a> 
+                                    </li> -->
+                                    <!-- <br> -->
                                     <li>
                                         <span class="subtask">Role labeling for memes:</span> The second subtask emphasizes detecting which entities are glorified, vilified or victimized, within a meme. Assuming the frame of reference as the meme author's perspective, the objective is to classify for a given pair of a meme and an entity, whether the entity is being referenced as Hero vs. Villain vs. Victim vs. Other, within that meme.<br>
-                                        <!-- <ol>
+                                        <ol>
                                             <li><b>Coarse-grained evaluation:</b> It is a binary evaluation of hostile vs non-hostile posts.</li>
                                             <li><b>Fine-grained evaluation:</b> It is a fine-grained evaluation of the hostile classes.</li>
          
-                                        </ol> -->
+                                        </ol>
                                     
-                                    <!-- <br>
-                                    <b> Definitions of the class labels: </b><br>
+                                    <br>
+                                    <b> Definition of the entity classes: </b><br>
                                     <ul>
-                                        <li><b> Fake News: </b>A claim or information that is verified to be not true. </li>
-                                        <li><b>Hate Speech:</b> A post targeting a specific group of people based on their ethnicity, religious beliefs, geographical belonging, race, etc., with malicious intentions of spreading hate or encouraging violence. </li>
-                                        <li><b> Offensive: </b>A post containing profanity, impolite, rude, or vulgar language to insult a targeted individual or group. </li>
-                                        <li> <b>Defamation: </b>A mis-information regarding an individual or group. </li>
-                                        <li><b> Non-hostile:</b> A post without any hostility. </li>
+                                        <li><b> Hero: </b>The entity is presented in a positive light. Glorified for their actions conveyed via the meme or gathered from background context </li>
+                                        <li><b>Villain: </b> The entity is portrayed negatively, e.g., in an association with adverse traits like wickedness, cruelty, hypocrisy, etc.  </li>
+                                        <li><b>Victim: </b> The entity is portrayed as suffering the negative impact of someone else’s actions or conveyed implicitly within the meme. </li>
+                                        <li><b>Other: </b> The entity is not a hero, a villain, or a victim.</li>
 
                                     </ul>
-                                    <br>
-                                    <b>Examples</b><br>
-                                    <p id="example">
+                                    <!-- <br> -->
+                                    <!-- <b>Examples</b><br> -->
+                                    <!-- <p id="example">
                                         <code>ये देखो इस्लाम क्या क्या सिखाता है जिहाद से लेकर आतंकवादी और दंगों से लेकर चोरी बुर्खे की आड़ में चद्दर चुराती महिलाएं</code> <span class="badge badge-pill">{hate}</span><br>
                                         <code>मोहतरमा JNU की 43 साल की छात्रा हैं , और कमाल की बात है कि उनकी बेटी मोना भी JNU में ही पड़ती है</code> <span class="badge badge-pill">{Fake, Defamation}</span><br>
                                         <code>जब इन दलितों को (सभी नहीं) हिन्दू धर्म और हिन्दू देवी देवताओं से इतनी नफरत भारी हुई है तो धूर्त कहीं के अपना नाम हिन्दुओं के जैसे ही क्यों रखते हैं। किसने रोका है कुछ भी बन से, बन जाओ मुस्लिम, ईसाई और जो मन करे। इस धूर्त की हिम्मत नहीं कि किसी दूसरे धर्म के बारे ऐसा बोल दे ।</code> <span class="badge badge-pill">{Hate, Offensive}</span><br>
                                        
 
                                         <code id="real"> डॉक्टर कफ़ील ख़ान को हाईकोर्ट से मिली ज़मानत https://t.co/DH5WE370XT </code><span class="badge badge-pill">{Non-hostile}</span>
-                                    </p>
- -->
+                                    </p> -->
+
 
                                 </li>
-                                <!-- <b>Evaluation Metric:</b> The official evaluation metric for the shared task is weighted-average F1 score.
                                 <br>
-                                <b>Hindi Dataset: </b> <a href="https://competitions.codalab.org/competitions/26654"> https://competitions.codalab.org/competitions/26654 </a> <br>
-                                    <b> Hindi Dataset Paper: </b> <a href = "https://arxiv.org/abs/2011.03588"> Hostility Detection Dataset in Hindi </a>
+                                <b>Evaluation Metric:</b> The official evaluation measure for the shared task is the weighted F1 score for the multi-class classification.
+                                <br>
+                                <b>Contest and Dataset: </b> <a href="https://codalab.lisn.upsaclay.fr/competitions/906"> https://codalab.lisn.upsaclay.fr/competitions/906 </a> <br>
+                                    <!-- <b> Hindi Dataset Paper: </b> <a href = "https://arxiv.org/abs/2011.03588"> Hostility Detection Dataset in Hindi </a> -->
+                                <!-- <br> -->
+
+                                <b>Submission:</b> Each team should submit the output in JSON line format for the final evaluation:<br>
+                                <code>
+                                    {
+                                        ‘image’ : ‘image_name’,
+                                        ‘hero’ : [entity_list], 
+                                        ‘villain’ : [entity_list],
+                                        ‘victim’ : [entity_list],
+                                        ‘other’ : [entity_list]
+                                    }
+
+                                </code>
+                                <br>
+                                In case of multiple submissions by a team, we shall consider the best submission prior to the deadline for the final evaluation. No exceptions shall be made.
                                 <br>
 
-                                <b>Submission:</b> Each team should submit a csv file in the following format for the final evaluation:<br>
-                                    &lt;unique_id, {labels}&gt;<br>
-                                In case of multiple submissions by a team, we shall consider the last submission prior to the deadline for the final evaluation. No exceptions shall be made.<br>
 
 
-                                <b>System description paper: </b>All team/participants will be invited to submit their models as short papers to be included in the proceedings. Based on the reviewers' comments, we will decide which papers to be accepted. There will be 2 types of accepted papers:<br>
-                                    1) Archival - These will be published in springer. At least one author must register for the workshop.<br>
-                                    2) (optional) Non - archival - These will not be published in formal prceedings. They will be (optional) presented as posters and we will put up a (optional) link to these papers on our website. <br> 
 
-                                <b>Submission details: </b> All papers must be submitted via our <a href = "https://easychair.org/conferences/?conf=constraint2021" >EasyChair submission page. </a> Papers should be single blind. Minimum 6 pages and maximum 12 pages including references. paper template : <a href = "https://www.springer.com/gp/authors-editors/conference-proceedings/conference-proceedings-guidelines"> https://www.springer.com/gp/authors-editors/conference-proceedings/conference-proceedings-guidelines</a> <br>
-                                <b> Best paper and Task Winner Awards:</b> There are 4 awards. Each one also includes a discounted registration for AAAI.<br>
+
+                                <!-- Each team should submit a csv file in the following format for the final evaluation:<br> -->
+                                    <!-- &lt;unique_id, {labels}&gt;<br> -->
+                                <!-- In case of multiple submissions by a team, we shall consider the last submission prior to the deadline for the final evaluation. No exceptions shall be made.<br> -->
+
+
+                                <!-- <b>System description paper: </b>All teams/participants will be invited to submit their models as short papers to be included in the proceedings. Based on the reviewers' comments, we will decide which papers to be accepted. There will be two types of papers:<br>
+                                    1) Archival: These articles will be published by Springer. At least one author must register for the workshop in that case.<br>
+                                    2) (optional) Non-archival: These articles will not be published in the proceedings. They will be (optionally) presented as posters and we will put up an (optional) link to them on our website.   <br> 
+
+                                <b>Submission details: </b> All papers must be submitted via our <a href = "https://easychair.org/conferences/?conf=constraint2021" >EasyChair submission page. </a> Papers should be single blind. Minimum 6 pages and maximum 12 pages including references. paper template : <a href = "https://www.springer.com/gp/authors-editors/conference-proceedings/conference-proceedings-guidelines"> https://www.springer.com/gp/authors-editors/conference-proceedings/conference-proceedings-guidelines</a> <br>-->
+                                <b> Best paper and Task Winner Awards:</b> There will be three awards. Each one also includes a discounted registration for ACL.<br> 
                                     <ul>
-                                        <li> Winner of English shared task </li>
-                                        <li> Winner of Hindi shared task (fine grained) </li>
+                                        <li> Winner of the Role labelling shared task</li>
                                         <li> Best paper award (main track) </li>
-                                        <li> Best paper award shared task (based on analysis, writing, methodology) </li>
-                                    </ul> -->
+                                        <li> Best paper award for the shared task (based on analysis, writing, methodology) </li>
+                                    </ul>
                             </li>
                         </ul>
                         
@@ -652,7 +672,7 @@ depicted or mentioned within a given meme.<br>
                     <tbody>
                         <tr class="trow">
                              <td><i class="fa fa-envelope" style="font-size: 20px;"></i>
-                             &nbsp;&nbsp;<a href="mailto:tanmoy@iiitd.ac.in">tanmoy@iiitd.ac.in</a></td>
+                             &nbsp;&nbsp;<a href="mailto:tanmoy@iiitd.ac.in">tanmoy@iiitd.ac.in</a>, <a href="mailto:shivams@iiitd.ac.in">shivams@iiitd.ac.in</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -665,7 +685,7 @@ depicted or mentioned within a given meme.<br>
                         <div class="row">
                             <div id="socialicons" style="">
                                 <span style="width: 90px;float: left"><h3>Follow Us</h3></span> &nbsp;
-                                <a class="icon" href="https://twitter.com/CONSTRAINT_AAAI" title="Follow with Twitter" target="_blank"><i class="fa fa-twitter" style="font-size: 20px;"></i></a>
+                                <a class="icon" href="https://twitter.com/CONSTRAINT_ACL" title="Follow with Twitter" target="_blank"><i class="fa fa-twitter" style="font-size: 20px;"></i></a>
                             </div>
                         </div>
                     </div>
