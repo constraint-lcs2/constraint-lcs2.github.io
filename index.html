@@ -121,11 +121,8 @@
                 <!-- <div class="event-date">11<sup>th</sup> January 2021, IIIT Delhi</div> -->
                 <div class="event-date">Collocated with ACL 2022</div>
                 <h2 style="color: #FFFFFF;">May 26th - 28th, 2022</h2>
-
                 <a class="page-scroll" href="#section-intro"><button type="button" class="btn btn-default btn-lg">LEARN MORE</button></a>
                 <br>
-
-
             </div>
         </div>
         <!-- .Jumbotron-->
@@ -237,7 +234,7 @@ publisher = {Springer},
                                             <li><b>Fine-grained evaluation:</b> It is a fine-grained evaluation of the hostile classes.</li>
          
                                         </ol> -->
-                                    <br>
+                                    We have publicly released datasets spanning 2 domains, <span style="color: red">Covid-19</span> and <span style="color: red">US Poltics</span>.<br><br>
                                     <li>
                                         <span class="subtask">Definition of the entity classes:</span> 
                                     <br>
@@ -258,19 +255,19 @@ publisher = {Springer},
 
                                         <div class="container">
                                             <div class="col-md-4">
-                                            <img src="./img/m1.jpeg" width="300px" height="300px">
+                                            <img src="./img/meme.jpeg" width="300px" height="300px">
                                             </div>
                                             <div class="col-md-8">
                                                 Corresponding JSON Line input:
                                                 <code>
                                                     <br>
                                                     {<br>
-                                                        ‘image’ : ‘image_1.png’, <br>
-                                                        ‘OCR’: "When you've got a 98% chance of surviving\nthe China virus\nMSM:\njust get in\nthe coffin.\nVISIT PATRIOTPOST.US FOR THE BEST HUMOR AND MEMES\n",<br>
-                                                        ‘hero’ : [], <br>
-                                                        ‘villain’ : [‘mainstream media (msm)’],<br>
-                                                        ‘victim’ : [‘people’],<br>
-                                                        ‘other’ : [‘coronavirus’]<br>
+                                                        ‘image’ : memes_1486.png’, <br>
+                                                        ‘OCR’: "AAE RNC\nCONVENTION 2020:\nHOPE AND\nPOSITIVITY\nDNC CONVENTION 2020:\nDOOM AND GLOOM\n",<br>
+                                                        ‘hero’ : ['Donald Trump'], <br>
+                                                        ‘villain’ : ['Joe Biden'],<br>
+                                                        ‘victim’ : [],<br>
+                                                        ‘other’ : ['Democratic National Convention (DMC)’, 'Republican National Convention (RNC)']<br>
                                                     }
                                                 </code>
                                             </div>
@@ -304,6 +301,7 @@ publisher = {Springer},
                                 <li>
                                 <span class="subtask">Evaluation Metric:</span>
                                 The official evaluation measure for the shared task is the weighted F1 score for the multi-class classification.
+                                <p> Please note, the evaluation of the submissions will be done on an unseen test set, that is a <span style="color: red">combination of data from both "Covid-19" and "US Politics"</span>.</p>
                                 </li>
                                 <li>
                                 <span class="subtask">Contest and Dataset: </span>
