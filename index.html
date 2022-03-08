@@ -140,10 +140,10 @@
                     <div class="col-md-12">
                         <p align="justify">
                         <ul style="list-style: none;">
-                            <!-- <li>
+                            <li>
                                 <div style="width: 5%; float: left;"><i class="fa fa-cog fa-spin fa-x" style="color:red;" aria-hidden="true"></i></div>
-                                <span style="color: red">Paper submission deadline extended. New deadline: March 8, 2022.</span>
-                            </li> -->
+                                <span style="color: red">The “unseen test set” has now been released.</span>
+                            </li>
                             <li>
                                 <div style="width: 5%; float: left;"><i class="fa fa-cog fa-spin fa-x" style="color:#0000ff;" aria-hidden="true"></i></div>
                                 Please note: Final metric to be used for evaluation is "macro-F1", and NOT "weighted-F1".
@@ -315,9 +315,35 @@ publisher = {Springer},
                                 <a href="https://codalab.lisn.upsaclay.fr/competitions/906"> https://codalab.lisn.upsaclay.fr/competitions/906 </a> <br></li>
                                     <!-- <b> Hindi Dataset Paper: </b> <a href = "https://arxiv.org/abs/2011.03588"> Hostility Detection Dataset in Hindi </a> -->
                                 <!-- <br> -->
+
+                                <li>
+                                    <span class="subtask">Unseen test set: </span>The “unseen test set” file and the corresponding image set will have samples from both Covid-19 and the US Politics domain.<br>
+                                    <code>
+                                        {<br>
+                                        ‘image’ : memes_1486.png’,<br>
+                                        ‘OCR’: "AAE RNC\nCONVENTION 2020:\nHOPEAND\nPOSITIVITY\nDNC CONVENTION 2020:\nDOOM AND GLOOM\n",<br>
+                                        ‘entity_list’ :['Donald Trump', 'Joe Biden','Democratic National Convention (DMC)’, 'Republican National Convention (RNC)']<br>
+                                         }<br><br>
+                                        {‘image’ : ‘image_2.png’,<br>
+                                        ‘OCR’ : "Whole world to\nPutin:\n*Putin\nVaccine\nWell done putin. I'm so proud of you\nVaccine\nVaccine\n",<br>
+
+                                        ‘entity_list’ : [‘Vladimir Putin’, ‘the world’, ‘Salman Khan’, ‘vaccine’]<br>} 
+                                        <br>
+
+
+                                    </code>
+                                </li>
                                 <li>
                                 <span class="subtask">Submission:</span>
+                                Instructions for prediction file submission at Codalab shared-task server:
                                 
+                                <ol>
+                                    <li>The submission NEEDS to be a .zip, with a .jsonl predicted results file as its ONLY content.</li>
+                                    <li>Filenames could be anything but should conform to "samplefilename.jsonl".</li>
+                                    <li>Please DO NOT include anything other than your only .jsonl prediction result file.</li>
+                                    <li>Please ensure ALL the test samples (meme image) AND the corresponding entities enlisted in the unseen set, are considered for prediction and appear in your submission file. Please, do NOT leave out any entity unpredicted.</li>
+                                </ol>
+
                                 Each team should submit the output in JSON line format for the final evaluation:<br><br>
                                 <p id="example">
                                 <code>
@@ -331,6 +357,36 @@ publisher = {Springer},
                                 </code>
                                 </p>
                                 
+                                For the samples depicted for the unseen test set, the submission format would look like:
+
+                                
+                                <br>
+                                 <code>
+                                    {
+                                        <br>
+                                        &nbsp‘image’ : memes_1486.png’,<br>
+                                        &nbsp‘hero’ : ['Donald Trump'], <br>
+                                        &nbsp‘villain’ : ['Joe Biden'],<br>
+                                        &nbsp‘victim’ : [],<br>
+                                        &nbsp‘other’ : ['Democratic National Convention (DMC)’, 'Republican National Convention (RNC)']<br>
+                                    }
+                                </code>
+                                <br>
+
+                                <code>
+                                    {
+                                        <br>
+                                        &nbsp‘image’ : ‘image_2.png’,<br>
+                                        &nbsp‘hero’ : [‘Vladimir Putin’], <br>
+                                        &nbsp‘villain’ : [],<br>
+                                        &nbsp‘victim’ : [],<br>
+                                        &nbsp‘other’ : [‘the world’, ‘Salman Khan’, ‘vaccine’]<br>
+                                    }
+                                </code>
+
+                                <!-- {‘image’ : ‘image_1.png’, ‘hero’ :[‘entity_1’], ‘villain’ : [‘entity_2’], ‘victim’ : [‘entity_3’], ‘other’ : [‘entity_4’] -->
+
+                                <br>
                                 In case of multiple submissions by a team, we shall consider the best submission prior to the deadline for the final evaluation. No exceptions shall be made.
                                 <br>
 
